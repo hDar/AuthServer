@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Secure User Management Page";
+}
+<h2>@ViewData["Title"]</h2>
+
+
+<h3>User Actions</h3>
+@if (ViewContext.HttpContext.User.IsInRole("super_admin"))
+{
+    <div>
+        <a asp-action="GetAllUsers">Get Users</a>
+    </div>
+    <div>
+        <a asp-action="AddRootUser">Add Root Organisation User</a>
+    </div>
+}
+else
+{
+    <div>
+        <a asp-action="AddUser">Add Organisation User</a>
+    </div>
+
+    <div>
+        <a asp-action="GetOrganisationUsers">List Organisation Users</a>
+    </div>
+}

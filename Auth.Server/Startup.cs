@@ -123,7 +123,7 @@ namespace Auth.Server
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddProfileService<ProfileService>();
 
-            /////////////////// Configuration for Auth Server API ////////////////////////////////////////
+            /////////////////// Configuration for Auth Server API /////////////////////////////////////
 
             services.AddMvcCore(options =>
             {
